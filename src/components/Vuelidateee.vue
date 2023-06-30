@@ -1,7 +1,7 @@
 <template>
     <div>
         <input v-model="name" type="text" placeholder="Tên"/>
-        <span v-if="$v?.value?.name?.$errors[0]?.$validator == 'required'"> Tên không được để trống </span>
+        <span v-if="!$v.name.required"> Tên không được để trống </span>
         <span v-if="!$v.name.minLength"> Tên phải có ít nhất 3 kí tự</span>
         <button @click="validateForm"> Kiểm tra </button>
     </div>
