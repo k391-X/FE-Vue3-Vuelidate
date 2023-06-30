@@ -24,6 +24,10 @@ const $v = useVuelidate(rules, {name});
 
 const validateForm = () => {
     $v.value.$touch();
+
+    // Co van de voi cac case kiem tra
+    console.log($v.value.$invalid);
+
     // Bao loi 1 thuoc tinh
     console.log($v.value.name.$error);
 
